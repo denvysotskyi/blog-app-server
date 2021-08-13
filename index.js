@@ -2,7 +2,7 @@ const express = require('express')
 const config = require('config')
 const mongoose = require('mongoose')
 const cors = require('cors')
-const router = require('./routes/router.js')
+const router = require('./routes/posts.router.js')
 
 const PORT = process.env.PORT || config.get('port') || 4444
 
