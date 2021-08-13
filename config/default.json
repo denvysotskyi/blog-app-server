@@ -1,0 +1,4 @@
+{
+  "port": 4444,
+  "mongoUri": "mongodb+srv://user:1user1@cluster0.yojdy.mongodb.net/blog-app-db?retryWrites=true&w=majority"
+}

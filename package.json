@@ -1,0 +1,22 @@
+{
+  "name": "blog-app-server",
+  "version": "1.0.0",
+  "description": "server for blog-app",
+  "main": "index.js",
+  "author": "denvysotskyi@gmail.com",
+  "license": "MIT",
+  "scripts": {
+    "start": "node index.js",
+    "dev": "nodemon index.js"
+  },
+  "dependencies": {
+    "axios": "^0.21.1",
+    "config": "^3.3.6",
+    "cors": "^2.8.5",
+    "express": "^4.17.1",
+    "mongoose": "^5.13.7"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.12"
+  }
+}
