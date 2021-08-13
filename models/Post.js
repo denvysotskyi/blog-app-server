@@ -1,5 +1,4 @@
-const mongoose = require('mongoose')
-const Schema = mongoose.Schema
+const { Schema, model } = require('mongoose')
 
 const Post = new Schema({
   id: {type: Number, required: true},
@@ -8,4 +7,4 @@ const Post = new Schema({
   photoUrl: {type: String, required: true},
 }, {timestamps: true})
 
-module.exports = mongoose.model('Post', Post)
+module.exports = model('Post', Post)
