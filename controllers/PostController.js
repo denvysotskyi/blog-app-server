@@ -1,4 +1,5 @@
 const PostService =  require('../services/PostService')
+const Post = require("../models/Post.js");
 
 class PostController {
 
@@ -13,7 +14,8 @@ class PostController {
 
   async getOne(req, res) {
     try {
-      const post = await PostService.getOne(req.params.id)
+      const { id } = req.params
+      const post = await PostService.getOne(id)
       return res.json(post)
     } catch (e) {
       res.status(500).json(e.message)
