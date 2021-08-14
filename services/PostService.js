@@ -1,6 +1,10 @@
 const Post =  require('../models/Post.js')
 
 class PostService {
+  async getAll() {
+    const posts = await Post.find()
+    return posts
+}
   async create(post) {
     const createdPost = await Post.create(post)
     return createdPost
