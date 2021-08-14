@@ -2,26 +2,6 @@ const PostService =  require('../services/PostService')
 
 class PostController {
 
-  async getAllPosts(req, res) {
-    try {
-      const posts = await PostService.getAllPosts()
-      return res.json(posts)
-    } catch (e) {
-      res.status(500).json(e.message)
-    }
-  }
-
-  async getOnePost(req, res) {
-    try {
-      const post = await PostService.getOne(req.params.id)
-      return res.json(post)
-    } catch (e) {
-      res.status(500).json(e.message)
-    }
-  }
-
-
-
   async getAll(req, res) {
     try {
       const posts = await PostService.getAll()

@@ -2,21 +2,6 @@ const Post =  require('../models/Post.js')
 
 class PostService {
 
-  async getAllPosts() {
-    const posts = await Post.find()
-    return posts
-  }
-
-  async getOnePost(id) {
-    if (!id) {
-      throw new Error('Id не указан')
-    }
-    const post = await Post.findById(id)
-    return post
-  }
-
-
-
   async getAll() {
     const posts = await Post.find()
     return posts
