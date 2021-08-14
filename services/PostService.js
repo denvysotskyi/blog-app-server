@@ -1,6 +1,12 @@
 const Post =  require('../models/Post.js')
 
 class PostService {
+
+  async getAllPosts() {
+    const posts = await Post.find()
+    return posts
+  }
+
   async getAll() {
     const posts = await Post.find()
     return posts
