@@ -11,6 +11,17 @@ class PostController {
     }
   }
 
+  async getOnePost(req, res) {
+    try {
+      const post = await PostService.getOne(req.params.id)
+      return res.json(post)
+    } catch (e) {
+      res.status(500).json(e.message)
+    }
+  }
+
+
+
   async getAll(req, res) {
     try {
       const posts = await PostService.getAll()

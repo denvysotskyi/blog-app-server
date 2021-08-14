@@ -7,6 +7,16 @@ class PostService {
     return posts
   }
 
+  async getOnePost(id) {
+    if (!id) {
+      throw new Error('Id не указан')
+    }
+    const post = await Post.findById(id)
+    return post
+  }
+
+
+
   async getAll() {
     const posts = await Post.find()
     return posts
