@@ -32,8 +32,7 @@ class PostService {
     if (!id) {
       throw new Error('Id не указан')
     }
-    const post = await Post.findByIdAndDelete(id)
-    return post
+    await Post.findByIdAndDelete(id)
   }
 }
 
