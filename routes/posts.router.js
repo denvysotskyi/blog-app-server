@@ -1,6 +1,5 @@
 const PostsRouter = require('express')
 const PostController = require('../controllers/PostController.js')
-const Post = require('../models/Post.js')
 
 const router = new PostsRouter()
 
