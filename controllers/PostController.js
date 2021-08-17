@@ -1,5 +1,4 @@
 const PostService =  require('../services/PostService')
-const Post = require("../models/Post.js");
 
 class PostController {
 
