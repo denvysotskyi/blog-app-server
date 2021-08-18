@@ -1,7 +1,7 @@
-const PostRouter = require('express')
+const PostsRouter = require('express')
 const PostController = require('../controllers/PostController.js')
 
-const router = new PostRouter()
+const router = new PostsRouter()
 
 router.get('/posts', PostController.getAll)
 router.get('/posts/:id', PostController.getOne)
