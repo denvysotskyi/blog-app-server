@@ -10,7 +10,7 @@ const app = express()
 
 app.use(cors())
 
-app.use(express.json({extended: true}))
+app.use(express.json({ extended: true }))
 
 app.use('/api/1.0/', router)
 
