@@ -14,14 +14,14 @@ app.use(express.json({ extended: true }))
 
 app.use('/api/1.0/', router)
 
-const startApp = (async () => {
+const appStart = (async () => {
   try {
     await mongoose.connect(config.get('mongoUri'),
       {
         useNewUrlParser: true,
         useUnifiedTopology: true
       })
-    app.listen(PORT, () => console.log(`Server run on port ${PORT}`))
+    await app.listen(PORT, () => console.log(`Server start on port ${PORT}`))
   } catch (e) {
     console.log(e.message)
     process.exit(1)
