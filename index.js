@@ -21,7 +21,7 @@ const appStart = (async () => {
         useNewUrlParser: true,
         useUnifiedTopology: true
       })
-    await app.listen(PORT, () => console.log(`Server started on port ${PORT}`))
+    await app.listen(PORT, () => console.log(`Server is started on port ${PORT}`))
   } catch (e) {
     console.log(e.message)
     process.exit(1)
